@@ -1,0 +1,19 @@
+{
+    "name": "NFT00",
+    "symbol": "NFT00",
+    "image": "0.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "8K1TovsNM7WL4UTrgbzSoeXBZfm3Uqk7rMVbRYW8gMWt",
+          "share": 100
+        }
+      ]
+    }
+  }
