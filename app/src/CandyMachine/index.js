@@ -88,16 +88,7 @@ const CandyMachine = ({ walletAddress }) => {
   };
 
   const mintToken = async () => {
-    const provider = getProvider();
-
-    const idl = await Program.fetchIdl(candyMachineProgram, provider);
-
-    const program = new Program(idl, candyMachineProgram, provider);
-
-    const candyMachine = await program.account.candyMachine.fetch(
-      process.env.REACT_APP_CANDY_MACHINE_ID
-    );
-
+    
     const mint = web3.Keypair.generate();
 
     const userTokenAccountAddress = (
@@ -412,7 +403,7 @@ const CandyMachine = ({ walletAddress }) => {
       <div className="machine-container">
         <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
         <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={null}>
+        <button className="cta-button mint-button" onClick={mintToken}>
           Mint NFT
         </button>
       </div>
