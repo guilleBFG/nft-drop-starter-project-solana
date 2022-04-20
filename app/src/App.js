@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import "./CountdownTimer/CountdownTimer.css";
 import twitterLogo from "./assets/twitter-logo.svg";
 import CandyMachine from './CandyMachine';
+
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
@@ -9,6 +11,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const [walletAddress, setWalletAddrtess] = useState(null);
+
 
   const connectWallet = async () => {
     try {
